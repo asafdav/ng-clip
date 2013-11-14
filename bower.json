@@ -1,0 +1,8 @@
+{
+  "name": "ng-clip",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "~1.0.4"
+  },
+  "devDependencies": {}
+}
