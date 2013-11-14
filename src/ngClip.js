@@ -12,7 +12,9 @@ angular.module('ngClipboard', []).
       link: function (scope, element, attrs) {
         // Create the clip object
         var clip = new ZeroClipboard( element, {
-          moviePath: ZeroClipboardPath
+          moviePath: ZeroClipboardPath,
+          trustedDomains: ['*'],
+          allowScriptAccess: "always"          
         });
 
         clip.on( 'mousedown', function(client) {
