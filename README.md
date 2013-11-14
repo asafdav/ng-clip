@@ -20,4 +20,4 @@ An AngularJS simple directive that uses ZeroClipboard and updates the user's cli
 
 
 ## Example
-You can check out this live example here: 
+You can check out this live example here: http://jsfiddle.net/asafdav/8YQcz/6/
