@@ -15,7 +15,7 @@ An AngularJS simple directive that uses ZeroClipboard and updates the user's cli
 
 4. Add clip-copy directive to the wanted element, example:
   ```html
-  <a href="" clip-copy="getReferralLink()" clip-click="copyLink()">Copy</a>
+  <a href="" clip-copy="getTextToCopy()" clip-click="doSomething()">Copy</a>
   ```
 
 
