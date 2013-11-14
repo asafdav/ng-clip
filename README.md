@@ -1,4 +1,4 @@
-ng-clip - Copy to clipboard using AngularJS
+ngClip - Copy to clipboard using AngularJS
 =======
 
 An AngularJS simple directive that uses ZeroClipboard and updates the user's clipboard. 
