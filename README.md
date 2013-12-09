@@ -23,11 +23,11 @@ bower install zeroclipboard
 	with the correct location of the swf file of the plugin in your file system, relatively to your project's root.
 	It is thus recommended to use [yeoman](http://yeoman.io/).
 
-	2b. If you don't use yeoman, you'll have to follow the instructions in 2a. and additionally, add the javascript ZeroClipboard file to the button of your index\main application page,
+	2b. If you don't use yeoman, you'll have to follow the instructions in 2a. and additionally, add the javascript ZeroClipboard file to the buttom of your index\main application page,
 	somewhere after angular.js and before the ngClip.js file should be fine(not critical):
 	```html
 	<script type="text/javascript" src="/relative-path/to/ZeroClipBoard.js"></script>
-		```
+	```
 3. Set `ngClipboard` as a dependency in your module
   ```javascript
   var myapp = angular.module('myapp', ['ngClipboard'])
