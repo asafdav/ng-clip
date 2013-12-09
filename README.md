@@ -8,7 +8,7 @@ An AngularJS simple directive that uses ZeroClipboard and updates the user's cli
 1. Add ng-clip.js to your main file (index.html)
 
 2. Use [bower](http://bower.io) to obtain the latest version ZeroClipboard from the official repository.
-if you are missing bower, use npm(Node package manger) to obtain it with:
+if you are missing bower, use npm(Node package manger) to obtain it with the following command:
 ```
 npm install -g bower
 ```
