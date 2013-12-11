@@ -24,7 +24,7 @@ bower install zeroclipboard
 	 value('ZeroClipboardPath', '//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/1.2.3/ZeroClipboard.swf').
 	
 	```
-	Just change this path the correct location of the swf file of the plugin in your file system, relatively to your project's root(this step optional):
+	Just change this path the correct location of the swf file of the plugin in your file system, relatively to your project's root(this step is optional):
 	
 	```javascript
 	 value('ZeroClipboardPath', 'relative-path/to/ZeroClipboard.swf').
