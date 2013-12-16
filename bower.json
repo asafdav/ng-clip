@@ -2,7 +2,8 @@
   "name": "ng-clip",
   "version": "0.0.1",
   "dependencies": {
-    "angular": "~1.0.4"
+    "angular": "~1.0.8",
+    "zeroclipboard": "~1.2.0"
   },
   "devDependencies": {}
 }
