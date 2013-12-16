@@ -1,8 +1,10 @@
 'use strict';
 
 angular.module('ngClipboard', []).
-  value('ZeroClipboardPath', '//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/1.1.7/ZeroClipboard.swf').
-  directive('clipCopy', ['$window', 'ZeroClipboardPath', function ($window, ZeroClipboardPath) {
+  value('ZeroClipboardConfig', {
+    path: '//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/1.1.7/ZeroClipboard.swf'
+  }).
+  directive('clipCopy', ['$window', 'ZeroClipboardConfig', function ($window, ZeroClipboardConfig) {
     return {
       scope: {
         clipCopy: '&',
@@ -12,7 +14,7 @@ angular.module('ngClipboard', []).
       link: function (scope, element, attrs) {
         // Create the clip object
         var clip = new ZeroClipboard( element, {
-          moviePath: ZeroClipboardPath,
+          moviePath: ZeroClipboardConfig.path,
           trustedDomains: ['*'],
           allowScriptAccess: "always"          
         });
