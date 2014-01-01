@@ -54,3 +54,7 @@ bower install zeroclipboard
 
 ## Example
 You can check out this live example here: http://jsfiddle.net/asafdav/8YQcz/6/
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/asafdav/ng-clip/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
