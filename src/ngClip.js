@@ -4,7 +4,7 @@ angular.module('ngClipboard', []).
   value('ZeroClipboardConfig', {
     path: '//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/1.2.3/ZeroClipboard.swf'
   }).
-  directive('clipCopy', ['$window', 'ZeroClipboardPath', function ($window, ZeroClipboardPath) {
+  directive('clipCopy', ['$window', 'ZeroClipboardConfig', function ($window, ZeroClipboardConfig) {
     return {
       scope: {
         clipCopy: '&',
