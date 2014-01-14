@@ -16,7 +16,7 @@ angular.module('ngClipboard', []).
         var clip = new ZeroClipboard( element, {
           moviePath: ZeroClipboardConfig.path,
           trustedDomains: ['*'],
-          allowScriptAccess: "always"          
+          allowScriptAccess: "always"
         });
 
         clip.on( 'mousedown', function(client) {
