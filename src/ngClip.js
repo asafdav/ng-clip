@@ -4,7 +4,7 @@ angular.module('ngClipboard', []).
   value('ZeroClipboardConfig', {
     path: '//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/1.2.3/ZeroClipboard.swf'
   }).
-  directive('clipCopy', ['$window', 'ZeroClipboardPath', function ($window, ZeroClipboardPath) {
+  directive('clipCopy', ['$window', 'ZeroClipboardConfig', function ($window, ZeroClipboardConfig) {
     return {
       scope: {
         clipCopy: '&',
@@ -16,14 +16,20 @@ angular.module('ngClipboard', []).
         var clip = new ZeroClipboard( element, {
           moviePath: ZeroClipboardConfig.path,
           trustedDomains: ['*'],
-          allowScriptAccess: "always"          
+          allowScriptAccess: "always"
         });
 
-        clip.on( 'mousedown', function(client) {
+        var onMousedown = function (client) {
           client.setText(scope.$eval(scope.clipCopy));
           if (angular.isDefined(attrs.clipClick)) {
             scope.$apply(scope.clipClick);
           }
+        };
+        clip.on('mousedown', onMousedown);
+
+        scope.$on('$destroy', function() {
+          clip.off('mousedown', onMousedown);
+          clip.unglue(element);
         });
       }
     }
