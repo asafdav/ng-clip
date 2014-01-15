@@ -19,11 +19,17 @@ angular.module('ngClipboard', []).
           allowScriptAccess: "always"
         });
 
-        clip.on( 'mousedown', function(client) {
+        var onMousedown = function (client) {
           client.setText(scope.$eval(scope.clipCopy));
           if (angular.isDefined(attrs.clipClick)) {
             scope.$apply(scope.clipClick);
           }
+        };
+        clip.on('mousedown', onMousedown);
+
+        scope.$on('$destroy', function() {
+          clip.off('mousedown', onMousedown);
+          clip.unglue(element);
         });
       }
     }
