@@ -43,7 +43,8 @@ angular.module('ngClipboard', []).
           client.on('mousedown', onMousedown);
 
           scope.$on('$destroy', function() {
-            element.unbind(onClickHandler);
+            client.off('mousedown', onMousedown);
+            client.unglue(element);
           });
         });
       }
