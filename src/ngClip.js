@@ -44,7 +44,7 @@ angular.module('ngClipboard', []).
 
           scope.$on('$destroy', function() {
             client.off('mousedown', onMousedown);
-            client.unglue(element);
+            client.unclip(element);
           });
         });
       }
