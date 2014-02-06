@@ -1,19 +1,21 @@
+/*jslint node: true */
+/*global ZeroClipboard */
 'use strict';
 
 angular.module('ngClipboard', []).
   provider('ngClip', function() {
     var self = this;
-    this.path = '//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/1.2.3/ZeroClipboard.swf';
+    this.path = '//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/1.3.2/ZeroClipboard.min.js';
     return {
       setPath: function(newPath) {
-       self.path = newPath
+       self.path = newPath;
       },
       $get: function() {
         return {
           path: self.path
         };
       }
-    }
+    };
   }).
   run(['$document', 'ngClip', function($document, ngClip) {
     ZeroClipboard.config({
@@ -44,9 +46,9 @@ angular.module('ngClipboard', []).
 
           scope.$on('$destroy', function() {
             client.off('mousedown', onMousedown);
-            client.unglue(element);
+            client.unclip(element);
           });
         });
       }
-    }
+    };
   }]);
