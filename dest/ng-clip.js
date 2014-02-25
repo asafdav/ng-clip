@@ -36,16 +36,16 @@ angular.module('ngClipboard', []).
         // Create the clip object
         var clip = new ZeroClipboard(element);
         clip.on( 'load', function(client) {
-          var onMousedown = function (client) {
+          var onDataRequested = function (client) {
             client.setText(scope.$eval(scope.clipCopy));
             if (angular.isDefined(attrs.clipClick)) {
               scope.$apply(scope.clipClick);
             }
           };
-          client.on('mousedown', onMousedown);
+          client.on('dataRequested', onDataRequested);
 
           scope.$on('$destroy', function() {
-            client.off('mousedown', onMousedown);
+            client.off('dataRequested', onDataRequested);
             client.unclip(element);
           });
         });
