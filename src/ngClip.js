@@ -17,7 +17,7 @@ angular.module('ngClipboard', []).
       }
     };
   }).
-  run(['$document', 'ngClip', function($document, ngClip) {
+  run(['ngClip', function(ngClip) {
     ZeroClipboard.config({
       moviePath: ngClip.path,
       trustedDomains: ["*"],
@@ -25,7 +25,7 @@ angular.module('ngClipboard', []).
       forceHandCursor: true
     });
   }]).
-  directive('clipCopy', ['$window', 'ngClip', function ($window, ngClip) {
+  directive('clipCopy', ['ngClip', function (ngClip) {
     return {
       scope: {
         clipCopy: '&',
