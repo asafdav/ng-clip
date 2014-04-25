@@ -35,6 +35,11 @@ angular.module('ngClipboard', []).
       link: function (scope, element, attrs) {
         // Create the clip object
         var clip = new ZeroClipboard(element);
+        if (attrs.clipCopy == "") {
+          scope.clipCopy = function(scope) {
+            return element[0].previousElementSibling.innerText;
+          };
+        }
         clip.on( 'load', function(client) {
           var onDataRequested = function (client) {
             client.setText(scope.$eval(scope.clipCopy));
