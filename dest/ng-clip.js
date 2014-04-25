@@ -1,0 +1,1 @@
+../src/ngClip.js
