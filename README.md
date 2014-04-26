@@ -5,9 +5,11 @@ An AngularJS simple directive that uses ZeroClipboard and updates the user's cli
 
 
 ## Usage
-1. Add ng-clip.js to your main file (index.html)
+1. Get ng-clip via **[Bower](http://bower.io/)**: by running `$ bower install ng-clip` from your console
 
-2. Include ZerClipboard.js in your project, and update the .swf path location using ngClipProvider
+2. Add ng-clip.js to your main file (index.html)
+
+3. Include ZerClipboard.js in your project, and update the .swf path location using ngClipProvider
 ```javascript
   .config(['ngClipProvider', function(ngClipProvider) {
     ngClipProvider.setPath("bower_components/zeroclipboard/ZeroClipboard.swf");
