@@ -5,7 +5,7 @@
 angular.module('ngClipboard', []).
   provider('ngClip', function() {
     var self = this;
-    this.path = '//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/1.3.2/ZeroClipboard.swf';
+    this.path = '//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/1.3.5/ZeroClipboard.swf';
     return {
       setPath: function(newPath) {
        self.path = newPath;
@@ -35,6 +35,11 @@ angular.module('ngClipboard', []).
       link: function (scope, element, attrs) {
         // Create the clip object
         var clip = new ZeroClipboard(element);
+        if (attrs.clipCopy == "") {
+          scope.clipCopy = function(scope) {
+            return element[0].previousElementSibling.innerText;
+          };
+        }
         clip.on( 'load', function(client) {
           var onDataRequested = function (client) {
             client.setText(scope.$eval(scope.clipCopy));
