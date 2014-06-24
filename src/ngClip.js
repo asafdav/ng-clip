@@ -19,7 +19,7 @@ angular.module('ngClipboard', []).
   }).
   run(['ngClip', function(ngClip) {
     ZeroClipboard.config({
-      moviePath: ngClip.path,
+      swfPath: ngClip.path,
       trustedDomains: ["*"],
       allowScriptAccess: "always",
       forceHandCursor: true
