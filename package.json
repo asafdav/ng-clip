@@ -1,6 +1,6 @@
 {
     "name": "ngClip",
-    "version": "0.1.4",
+    "version": "0.2.2",
     "dependencies": {},
     "devDependencies": {
         "grunt": "~0.4.1",
