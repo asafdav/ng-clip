@@ -1,6 +1,6 @@
 {
     "name": "ngClip",
-    "version": "0.1.4",
+    "version": "0.2.2",
     "dependencies": {},
     "devDependencies": {
         "grunt": "~0.4.1",
@@ -26,9 +26,9 @@
         "connect-livereload": "~0.2.0",
         "grunt-google-cdn": "~0.2.0",
         "grunt-ngmin": "~0.0.2",
-        "karma": "~0.9",
-        "karma-jasmine": "~0.0.3",
-        "karma-chrome-launcher": "~0.0.2"
+        "karma": "~0.12.0",
+        "karma-jasmine": "~0.1.5",
+        "karma-chrome-launcher": "~0.1.4"
     },
     "engines": {
         "node": ">=0.8.0"
