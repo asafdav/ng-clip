@@ -12,20 +12,25 @@
         setPath: function(newPath) {
          self.path = newPath;
         },
+        setConfig: function(config) {
+          self.config = config;
+        },
         $get: function() {
           return {
-            path: self.path
+            path: self.path,
+            config: self.config
           };
         }
       };
     }).
     run(['ngClip', function(ngClip) {
-      ZeroClipboard.config({
+      var config = {
         swfPath: ngClip.path,
         trustedDomains: ["*"],
         allowScriptAccess: "always",
-        forceHandCursor: true
-      });
+        forceHandCursor: true,
+      };
+      ZeroClipboard.config(angular.extend(config,ngClip.config || {}));
     }]).
     directive('clipCopy', ['ngClip', function (ngClip) {
       return {

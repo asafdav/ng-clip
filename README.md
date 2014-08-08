@@ -55,6 +55,12 @@ An AngularJS simple directive that uses ZeroClipboard and updates the user's cli
   <a href="" clip-copy="getTextToCopy()" clip-click="doSomething()">Copy</a>
   ```
 
+5. You can optionally override zeroclipboard config parameters using ngClipProvider
+```javascript
+    ngClipProvider.setConfig({
+      zIndex: 50
+    });
+```
 
 ## Example
 You can check out this live example here: http://jsfiddle.net/asafdav/8YQcz/6/
