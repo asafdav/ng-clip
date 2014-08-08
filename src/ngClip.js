@@ -18,7 +18,7 @@
         $get: function() {
           return {
             path: self.path,
-	    config : self.config
+            config: self.config
           };
         }
       };
