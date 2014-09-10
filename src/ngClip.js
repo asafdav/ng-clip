@@ -7,7 +7,7 @@
   angular.module('ngClipboard', []).
     provider('ngClip', function() {
       var self = this;
-      this.path = '//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.1/ZeroClipboard.swf';
+      this.path = '//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.6/ZeroClipboard.swf';
       return {
         setPath: function(newPath) {
          self.path = newPath;
