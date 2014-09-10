@@ -42,7 +42,7 @@ An AngularJS simple directive that uses ZeroClipboard and updates the user's cli
 	Alternatively, if you wish to use this library from CDN, it is available on cdnjs:
 	
 	```html
-	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/1.2.3/ZeroClipboard.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.6/ZeroClipboard.min.js"></script>
 	```
 
 3. Set `ngClipboard` as a dependency in your module
