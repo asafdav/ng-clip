@@ -20,15 +20,16 @@
         <label >Copy #1</label>
         <input type="text" class="form-control" placeholder="Enter text to copy" ng-model="copy1">
       </div>
-      <button class="btn btn-default" clip-copy="copy1" clip-click-fallback="fallback(copy)">Copy!</button>
+      <button class="btn btn-default" clip-copy="copy1">Copy!</button>
 
       <br/><br/><br/>
 
       <div class="form-group">
-        <label >Copy #2</label>
-        <input type="text" class="form-control" placeholder="Enter text to copy" ng-model="copy2" >
+        <label >Copy #2 with fallback for users without flash</label>
+        <p>Try disabling flash to see a graceful fallback</p>
+        <input type="text" class="form-control" placeholder="Enter text to copy" ng-model="copy2">
       </div>
-      <button class="btn btn-default" clip-copy="copy2">Copy!</button>
+      <button class="btn btn-default" clip-copy="copy2" clip-click-fallback="fallback(copy)">Copy!</button>
 
       <br/><br/><br/>
 
@@ -46,7 +47,7 @@
 
   myapp.controller('myctrl', function ($scope) {
     $scope.fallback = function(copy) {
-      console.log('fallback', copy);
+      window.prompt('Press cmd+c to copy the text below.', copy);
     }
   });
 </script>
