@@ -30,11 +30,18 @@ An AngularJS simple directive that uses ZeroClipboard and updates the user's cli
   ```
 
 6. You can optionally override zeroclipboard config parameters using ngClipProvider
-```javascript
-    ngClipProvider.setConfig({
-      zIndex: 50
-    });
-```
+  ```javascript
+      ngClipProvider.setConfig({
+        zIndex: 50
+      });
+  ```
+
+7. You can also optionally provide a fallback function that gets called if flash is unavailable:
+  ```html
+  <a href="" clip-click-fallback="fallback(copy)" clip-copy="getTextToCopy()" clip-click="doSomething()">Copy</a>
+  ```
+
+  If the fallback function is defined to accept an argument named `copy`, that argument will be populated with the text to copy.
 
 ## Example
 You can check out this live example here: http://jsfiddle.net/asafdav/8YQcz/6/
