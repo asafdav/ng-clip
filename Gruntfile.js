@@ -69,7 +69,14 @@ module.exports = function (grunt) {
         'Gruntfile.js',
         'src/**/*'
       ],
-      tasks: ['default']
+      tasks: ['build']
+    },
+    connect: {
+      server: {
+        options: {
+          hostname: '*'
+        }
+      }
     }
   });
 
@@ -80,9 +87,10 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   grunt.registerTask('test', ['jshint', 'karma:unit']);
-  grunt.registerTask('default', ['jshint:beforeConcat', 'concat', 'jshint:afterConcat', 'uglify']);
-  grunt.registerTask('livereload', ['default', 'watch']);
+  grunt.registerTask('build', ['jshint:beforeConcat', 'concat', 'jshint:afterConcat', 'uglify']);
+  grunt.registerTask('default', ['build', 'connect:server', 'watch']);
 
 };
