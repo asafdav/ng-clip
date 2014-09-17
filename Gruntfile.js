@@ -69,7 +69,7 @@ module.exports = function (grunt) {
         'Gruntfile.js',
         'src/**/*'
       ],
-      tasks: ['build']
+      tasks: ['default']
     },
     connect: {
       server: {
@@ -90,7 +90,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
 
   grunt.registerTask('test', ['jshint', 'karma:unit']);
-  grunt.registerTask('build', ['jshint:beforeConcat', 'concat', 'jshint:afterConcat', 'uglify']);
-  grunt.registerTask('default', ['build', 'connect:server', 'watch']);
+  grunt.registerTask('default', ['jshint:beforeConcat', 'concat', 'jshint:afterConcat', 'uglify']);
+  grunt.registerTask('livereload', ['default', 'connect:server', 'watch']);
 
 };
