@@ -20,7 +20,7 @@
         <label >Copy #1</label>
         <input type="text" class="form-control" placeholder="Enter text to copy" ng-model="copy1">
       </div>
-      <button class="btn btn-default" clip-copy="copy1">Copy!</button>
+      <button class="btn btn-default" clip-copy="copy1" clip-click-fallback="fallback(copy)">Copy!</button>
 
       <br/><br/><br/>
 
@@ -41,11 +41,13 @@
   var myapp = angular.module('myapp', ["ngClipboard"]);
 
   myapp.config(['ngClipProvider', function(ngClipProvider) {
-    ngClipProvider.setPath("../bower_components/zeroclipboard/ZeroClipboard.swf");
+    ngClipProvider.setPath("../bower_components/zeroclipboard/dist/ZeroClipboard.swf");
   }]);
 
   myapp.controller('myctrl', function ($scope) {
-
+    $scope.fallback = function(copy) {
+      console.log('fallback', copy);
+    }
   });
 </script>
 
