@@ -43,8 +43,12 @@
         link: function (scope, element, attrs) {
           // Bind a fallback function if flash is unavailable
           if (ZeroClipboard.isFlashUnusable()) {
-            element.bind('click', function() {
-              scope.$apply(scope.clipClickFallback({copy: scope.$eval(scope.clipCopy)}));
+            element.bind('click', function($event) {
+              // Execute the expression with local variables `$event` and `copy`
+              scope.$apply(scope.clipClickFallback({
+                $event: $event,
+                copy: scope.$eval(scope.clipCopy)
+              }));
             });
 
             return;
