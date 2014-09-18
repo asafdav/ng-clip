@@ -1,66 +1,47 @@
 ngClip - Copy to clipboard using AngularJS
 =======
 
-An AngularJS simple directive that uses ZeroClipboard and updates the user's clipboard. 
+An AngularJS simple directive that uses ZeroClipboard and updates the user's clipboard.
 
 
 ## Usage
-1. Get ng-clip via **[Bower](http://bower.io/)**: by running `$ bower install ng-clip` from your console
+1. Get ng-clip and ZeroClipboard via **[Bower](http://bower.io/)** by running the below in your console:
+  ```
+  bower install zeroclipboard ng-clip
+  ```
 
-2. Add ng-clip.js to your main file (index.html)
+2. Add ng-clip.js and ZeroClipboard.js to your main file (index.html)
 
-3. Include ZeroClipboard.js in your project, and update the .swf path location using ngClipProvider
-```javascript
-  .config(['ngClipProvider', function(ngClipProvider) {
-    ngClipProvider.setPath("bower_components/zeroclipboard/ZeroClipboard.swf");
-  }]);
-```
+3. Update the .swf path location using ngClipProvider
+  ```javascript
+    .config(['ngClipProvider', function(ngClipProvider) {
+      ngClipProvider.setPath("bower_components/zeroclipboard/dist/ZeroClipboard.swf");
+    }]);
+  ```
 
-	There are several ways you can use to include ZeroClipboard, please use one of the following options:
-	- Bower:
-	
-	Use [bower](http://bower.io) to obtain the latest version ZeroClipboard from the official repository.
-
-	```
-	bower install zeroclipboard
-	```
-
-	Then you may need to update the .swf file to point to your local copy using 
-	
-	```javascript
-	ngClipProvider.setPath("relative-path/to/ZeroClipboard.swf");
-	```
-	
-	if you are missing bower, use npm(Node Packaged Modules) to obtain it with the following command:
-	
-	```
-	npm install -g bower
-	```
-	
-	- CDNJS:
-
-	Alternatively, if you wish to use this library from CDN, it is available on cdnjs:
-	
-	```html
-	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.6/ZeroClipboard.min.js"></script>
-	```
-
-3. Set `ngClipboard` as a dependency in your module
+4. Set `ngClipboard` as a dependency in your module
   ```javascript
   var myapp = angular.module('myapp', ['ngClipboard'])
   ```
 
-4. Add clip-copy directive to the wanted element, example:
+5. Add clip-copy directive to the wanted element, example:
   ```html
   <a href="" clip-copy="getTextToCopy()" clip-click="doSomething()">Copy</a>
   ```
 
-5. You can optionally override zeroclipboard config parameters using ngClipProvider
-```javascript
-    ngClipProvider.setConfig({
-      zIndex: 50
-    });
-```
+6. You can optionally override zeroclipboard config parameters using ngClipProvider
+  ```javascript
+      ngClipProvider.setConfig({
+        zIndex: 50
+      });
+  ```
+
+7. You can also optionally provide a fallback function that gets called if flash is unavailable:
+  ```html
+  <a href="" clip-click-fallback="fallback(copy)" clip-copy="getTextToCopy()" clip-click="doSomething()">Copy</a>
+  ```
+
+  If the fallback function is defined to accept an argument named `copy`, that argument will be populated with the text to copy.
 
 ## Example
 You can check out this live example here: http://jsfiddle.net/asafdav/8YQcz/6/

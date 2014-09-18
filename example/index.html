@@ -25,10 +25,11 @@
       <br/><br/><br/>
 
       <div class="form-group">
-        <label >Copy #2</label>
-        <input type="text" class="form-control" placeholder="Enter text to copy" ng-model="copy2" >
+        <label >Copy #2 with fallback for users without flash</label>
+        <p>Try disabling flash to see a graceful fallback</p>
+        <input type="text" class="form-control" placeholder="Enter text to copy" ng-model="copy2">
       </div>
-      <button class="btn btn-default" clip-copy="copy2">Copy!</button>
+      <button class="btn btn-default" clip-copy="copy2" clip-click-fallback="fallback(copy)">Copy!</button>
 
       <br/><br/><br/>
 
@@ -41,11 +42,13 @@
   var myapp = angular.module('myapp', ["ngClipboard"]);
 
   myapp.config(['ngClipProvider', function(ngClipProvider) {
-    ngClipProvider.setPath("../bower_components/zeroclipboard/ZeroClipboard.swf");
+    ngClipProvider.setPath("../bower_components/zeroclipboard/dist/ZeroClipboard.swf");
   }]);
 
   myapp.controller('myctrl', function ($scope) {
-
+    $scope.fallback = function(copy) {
+      window.prompt('Press cmd+c to copy the text below.', copy);
+    }
   });
 </script>
 
