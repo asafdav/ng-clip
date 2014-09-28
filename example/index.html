@@ -33,6 +33,14 @@
 
       <br/><br/><br/>
 
+      <div class="form-group">
+        <label >Copy #3 with with clip-click</label>
+        <input type="text" class="form-control" placeholder="Enter text to copy" ng-model="copy3">
+      </div>
+      <button class="btn btn-default" clip-copy="copy3" clip-click="showMessage()">Copy!</button>
+
+      <br/><br/><br/>
+
       <textarea class="form-control" rows="3" placeholder="paste here"></textarea>
     </form>
   </div>
@@ -48,9 +56,13 @@
   myapp.controller('myctrl', function ($scope) {
     $scope.fallback = function(copy) {
       window.prompt('Press cmd+c to copy the text below.', copy);
-    }
+    };
+
+    $scope.showMessage = function() {
+      console.log("clip-click works!");
+    };
   });
 </script>
 
-</body>
+</body  >
 </html>
