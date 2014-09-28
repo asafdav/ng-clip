@@ -1,6 +1,26 @@
 {
     "name": "ngClip",
-    "version": "0.2.2",
+    "version": "0.2.4",
+    "main": "dest/ng-clip.min.js",
+    "filename": "ng-clip.min.js",
+    "description": "Copy to clipboard using AngularJS",
+    "repository": {
+      "type": "git",
+      "url": "git@github.com:asafdav/ng-clip.git"
+    },
+    "keywords": [
+      "angular",
+      "angularjs",
+      "clipboard",
+      "copy",
+      "ZeroClipboard"
+    ],
+    "homepage": "https://github.com/asafdav/ng-clip",
+    "author": {
+      "name": "Asaf David",
+      "email": "asafdav@gmail.com",
+      "url": "http://about.me/asafdavid"
+    },
     "dependencies": {},
     "devDependencies": {
         "grunt": "~0.4.1",
