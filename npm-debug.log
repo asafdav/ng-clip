@@ -1,0 +1,145 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.28
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/asafdavid/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/var/folders/gd/cvjmv1ps5mlfzgn5p7yvhpzw0000gn/T/npm-7455-NrdkpOEp/1411933761188-0.5080849414225668/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /var/folders/gd/cvjmv1ps5mlfzgn5p7yvhpzw0000gn/T/npm-7455-NrdkpOEp/1411933761188-0.5080849414225668/tmp.tgz
+12 verbose folder .
+13 info prepublish ngClip@0.2.4
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/asafdavid/.npm/1f1177db-tar.lock
+16 silly lockFile 6975d7f7-61188-0-5080849414225668-tmp-tgz tar:///var/folders/gd/cvjmv1ps5mlfzgn5p7yvhpzw0000gn/T/npm-7455-NrdkpOEp/1411933761188-0.5080849414225668/tmp.tgz
+17 verbose lock tar:///var/folders/gd/cvjmv1ps5mlfzgn5p7yvhpzw0000gn/T/npm-7455-NrdkpOEp/1411933761188-0.5080849414225668/tmp.tgz /Users/asafdavid/.npm/6975d7f7-61188-0-5080849414225668-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 6975d7f7-61188-0-5080849414225668-tmp-tgz tar:///var/folders/gd/cvjmv1ps5mlfzgn5p7yvhpzw0000gn/T/npm-7455-NrdkpOEp/1411933761188-0.5080849414225668/tmp.tgz
+21 silly lockFile 6975d7f7-61188-0-5080849414225668-tmp-tgz tar:///var/folders/gd/cvjmv1ps5mlfzgn5p7yvhpzw0000gn/T/npm-7455-NrdkpOEp/1411933761188-0.5080849414225668/tmp.tgz
+22 verbose tar unpack /var/folders/gd/cvjmv1ps5mlfzgn5p7yvhpzw0000gn/T/npm-7455-NrdkpOEp/1411933761188-0.5080849414225668/tmp.tgz
+23 silly lockFile 69292c66-afdavid-npm-ngClip-0-2-4-package tar:///Users/asafdavid/.npm/ngClip/0.2.4/package
+24 verbose lock tar:///Users/asafdavid/.npm/ngClip/0.2.4/package /Users/asafdavid/.npm/69292c66-afdavid-npm-ngClip-0-2-4-package.lock
+25 silly lockFile 6975d7f7-61188-0-5080849414225668-tmp-tgz tar:///var/folders/gd/cvjmv1ps5mlfzgn5p7yvhpzw0000gn/T/npm-7455-NrdkpOEp/1411933761188-0.5080849414225668/tmp.tgz
+26 verbose lock tar:///var/folders/gd/cvjmv1ps5mlfzgn5p7yvhpzw0000gn/T/npm-7455-NrdkpOEp/1411933761188-0.5080849414225668/tmp.tgz /Users/asafdavid/.npm/6975d7f7-61188-0-5080849414225668-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm extractEntry .npmignore
+30 silly gunzTarPerm extractEntry README.md
+31 silly gunzTarPerm extractEntry LICENSE
+32 silly gunzTarPerm extractEntry Gruntfile.js
+33 silly gunzTarPerm extractEntry bower.json
+34 silly gunzTarPerm extractEntry dest/ng-clip.min.js
+35 silly gunzTarPerm extractEntry example/bootstrap-tooltip.html
+36 silly gunzTarPerm extractEntry example/index.html
+37 silly gunzTarPerm extractEntry example/ng-repeat.html
+38 silly gunzTarPerm extractEntry .editorconfig
+39 silly gunzTarPerm extractEntry src/ngClip.js
+40 silly lockFile 69292c66-afdavid-npm-ngClip-0-2-4-package tar:///Users/asafdavid/.npm/ngClip/0.2.4/package
+41 silly lockFile 69292c66-afdavid-npm-ngClip-0-2-4-package tar:///Users/asafdavid/.npm/ngClip/0.2.4/package
+42 silly lockFile 6975d7f7-61188-0-5080849414225668-tmp-tgz tar:///var/folders/gd/cvjmv1ps5mlfzgn5p7yvhpzw0000gn/T/npm-7455-NrdkpOEp/1411933761188-0.5080849414225668/tmp.tgz
+43 silly lockFile 6975d7f7-61188-0-5080849414225668-tmp-tgz tar:///var/folders/gd/cvjmv1ps5mlfzgn5p7yvhpzw0000gn/T/npm-7455-NrdkpOEp/1411933761188-0.5080849414225668/tmp.tgz
+44 silly lockFile 3a52ce78- .
+45 silly lockFile 3a52ce78- .
+46 silly publish { name: 'ngClip',
+46 silly publish   version: '0.2.4',
+46 silly publish   main: 'dest/ng-clip.min.js',
+46 silly publish   filename: 'ng-clip.min.js',
+46 silly publish   description: 'Copy to clipboard using AngularJS',
+46 silly publish   repository: { type: 'git', url: 'git@github.com:asafdav/ng-clip.git' },
+46 silly publish   keywords: [ 'angular', 'angularjs', 'clipboard', 'copy', 'ZeroClipboard' ],
+46 silly publish   homepage: 'https://github.com/asafdav/ng-clip',
+46 silly publish   author:
+46 silly publish    { name: 'Asaf David',
+46 silly publish      email: 'asafdav@gmail.com',
+46 silly publish      url: 'http://about.me/asafdavid' },
+46 silly publish   dependencies: {},
+46 silly publish   devDependencies:
+46 silly publish    { grunt: '~0.4.1',
+46 silly publish      'grunt-contrib-copy': '~0.4.1',
+46 silly publish      'grunt-contrib-concat': '~0.3.0',
+46 silly publish      'grunt-contrib-coffee': '~0.7.0',
+46 silly publish      'grunt-contrib-uglify': '~0.2.0',
+46 silly publish      'grunt-contrib-compass': '~0.3.0',
+46 silly publish      'grunt-contrib-jshint': '~0.6.0',
+46 silly publish      'grunt-contrib-cssmin': '~0.6.0',
+46 silly publish      'grunt-contrib-connect': '~0.3.0',
+46 silly publish      'grunt-contrib-clean': '~0.4.1',
+46 silly publish      'grunt-contrib-htmlmin': '~0.1.3',
+46 silly publish      'grunt-contrib-imagemin': '~0.1.4',
+46 silly publish      'grunt-contrib-watch': '~0.4.0',
+46 silly publish      'grunt-usemin': '~0.1.11',
+46 silly publish      'grunt-svgmin': '~0.2.0',
+46 silly publish      'grunt-rev': '~0.1.0',
+46 silly publish      'grunt-karma': '~0.4.3',
+46 silly publish      'grunt-open': '~0.2.0',
+46 silly publish      'grunt-concurrent': '~0.3.0',
+46 silly publish      matchdep: '~0.1.2',
+46 silly publish      'connect-livereload': '~0.2.0',
+46 silly publish      'grunt-google-cdn': '~0.2.0',
+46 silly publish      'grunt-ngmin': '~0.0.2',
+46 silly publish      karma: '~0.12.0',
+46 silly publish      'karma-jasmine': '~0.1.5',
+46 silly publish      'karma-chrome-launcher': '~0.1.4' },
+46 silly publish   engines: { node: '>=0.8.0' },
+46 silly publish   readme: 'ngClip - Copy to clipboard using AngularJS\n=======\n\nAn AngularJS simple directive that uses ZeroClipboard and updates the user\'s clipboard.\n\n\n## Usage\n1. Get ng-clip and ZeroClipboard via **[Bower](http://bower.io/)** by running the below in your console:\n  ```\n  bower install zeroclipboard ng-clip\n  ```\n\n2. Add ng-clip.js and ZeroClipboard.js to your main file (index.html)\n\n3. Update the .swf path location using ngClipProvider\n  ```javascript\n    .config([\'ngClipProvider\', function(ngClipProvider) {\n      ngClipProvider.setPath("bower_components/zeroclipboard/dist/ZeroClipboard.swf");\n    }]);\n  ```\n\n4. Set `ngClipboard` as a dependency in your module\n  ```javascript\n  var myapp = angular.module(\'myapp\', [\'ngClipboard\'])\n  ```\n\n5. Add clip-copy directive to the wanted element, example:\n  ```html\n  <a href="" clip-copy="getTextToCopy()" clip-click="doSomething()">Copy</a>\n  ```\n\n6. You can optionally override zeroclipboard config parameters using ngClipProvider\n  ```javascript\n      ngClipProvider.setConfig({\n        zIndex: 50\n      });\n  ```\n\n7. You can also optionally provide a fallback function that gets called if flash is unavailable:\n  ```html\n  <a href="" clip-click-fallback="fallback(copy)" clip-copy="getTextToCopy()" clip-click="doSomething()">Copy</a>\n  ```\n\n  If the fallback function is defined to accept an argument named `copy`, that argument will be populated with the text to copy.\n\n## Example\nYou can check out this live example here: http://jsfiddle.net/asafdav/8YQcz/6/\n\n\n[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/asafdav/ng-clip/trend.png)](https://bitdeli.com/free "Bitdeli Badge")\n\n',
+46 silly publish   readmeFilename: 'README.md',
+46 silly publish   bugs: { url: 'https://github.com/asafdav/ng-clip/issues' },
+46 silly publish   _id: 'ngClip@0.2.4',
+46 silly publish   _shasum: 'bc80d925288bd502cba5778ea905e4607ce150b4',
+46 silly publish   _from: '.' }
+47 verbose url raw ngClip
+48 verbose url resolving [ 'https://registry.npmjs.org/', './ngClip' ]
+49 verbose url resolved https://registry.npmjs.org/ngClip
+50 info trying registry request attempt 1 at 22:49:21
+51 http PUT https://registry.npmjs.org/ngClip
+52 http 403 https://registry.npmjs.org/ngClip
+53 verbose headers { date: 'Sun, 28 Sep 2014 19:49:24 GMT',
+53 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+53 verbose headers   'content-type': 'application/json',
+53 verbose headers   'cache-control': 'max-age=60',
+53 verbose headers   'content-length': '76',
+53 verbose headers   'accept-ranges': 'bytes',
+53 verbose headers   via: '1.1 varnish',
+53 verbose headers   'x-served-by': 'cache-lcy1121-LCY',
+53 verbose headers   'x-cache': 'MISS',
+53 verbose headers   'x-cache-hits': '0',
+53 verbose headers   'x-timer': 'S1411933763.613672,VS0,VE778',
+53 verbose headers   'keep-alive': 'timeout=10, max=50',
+53 verbose headers   connection: 'Keep-Alive' }
+54 error publish Failed PUT 403
+55 error Error: forbidden New packages must have all-lowercase names: ngClip
+55 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:273:14)
+55 error     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:211:65)
+55 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:123:22)
+55 error     at Request.EventEmitter.emit (events.js:98:17)
+55 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:893:14)
+55 error     at Request.EventEmitter.emit (events.js:117:20)
+55 error     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:844:12)
+55 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+55 error     at _stream_readable.js:919:16
+55 error     at process._tickCallback (node.js:419:13)
+56 error If you need help, you may report this *entire* log,
+56 error including the npm and node versions, at:
+56 error     <http://github.com/npm/npm/issues>
+57 error System Darwin 13.4.0
+58 error command "node" "/usr/local/bin/npm" "publish"
+59 error cwd /Users/asafdavid/git/AngularJS/ng-clip
+60 error node -v v0.10.28
+61 error npm -v 1.4.9
+62 verbose exit [ 1, true ]
