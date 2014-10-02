@@ -9,7 +9,12 @@ An AngularJS simple directive that uses ZeroClipboard and updates the user's cli
   ```
   bower install zeroclipboard ng-clip
   ```
-
+  
+  Or get it via npm by running the following command: 
+  ```
+  npm install zeroclipboard ng-clip
+  ```
+  
 2. Add ng-clip.js and ZeroClipboard.js to your main file (index.html)
 
 3. Update the .swf path location using ngClipProvider
