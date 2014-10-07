@@ -58,8 +58,9 @@ ng-csv is available at [cdnjs](http://www.cdnjs.com/libraries/ng-clip)
 
   If the fallback function is defined to accept an argument named `copy`, that argument will be populated with the text to copy.
 
-## Example
-You can check out this live example here: http://jsfiddle.net/asafdav/8YQcz/6/
+## Examples
+You can check out this live example here: http://plnkr.co/xwV5Yn 
+see the examples folder for more 
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/asafdav/ng-clip/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
