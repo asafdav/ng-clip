@@ -20,7 +20,7 @@ npm install zeroclipboard ng-clip
 ```
 
 #### CDN
-ng-csv is available at [cdnjs](http://www.cdnjs.com/libraries/ng-clip)
+ng-clip is available at [cdnjs](http://www.cdnjs.com/libraries/ng-clip)
 
 
 ## Usage
