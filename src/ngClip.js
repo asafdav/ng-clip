@@ -37,12 +37,18 @@
         scope: {
           clipCopy: '&',
           clipClick: '&',
-          clipClickFallback: '&'
+          clipClickFallback: '&',
+          clipHideOnNoFlash: '&'
         },
         restrict: 'A',
         link: function (scope, element, attrs) {
           // Bind a fallback function if flash is unavailable
           if (ZeroClipboard.isFlashUnusable()) {
+            if (angular.isDefined(attrs.clipHideOnNoFlash)) {
+              element.hide();
+              return;
+            }
+            
             element.bind('click', function($event) {
               // Execute the expression with local variables `$event` and `copy`
               scope.$apply(scope.clipClickFallback({
