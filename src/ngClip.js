@@ -65,7 +65,7 @@
 
             client.on('copy', function (event) {
               var clipboard = event.clipboardData;
-              clipboard.setData('text/plain', scope.$eval(scope.clipCopy));
+              clipboard.setData(attrs.clipCopyMimeType || 'text/plain', scope.$eval(scope.clipCopy));
             });
 
             client.on( 'aftercopy', function(event) {
