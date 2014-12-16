@@ -63,7 +63,6 @@ ng-clip is available at [cdnjs](http://www.cdnjs.com/libraries/ng-clip)
 
   If the fallback function is defined to accept an argument named `copy`, that argument will be populated with the text to copy.
 
-
 ## Examples
 You can check out this live example here: http://plnkr.co/xwV5Yn 
 see the examples folder for more 
