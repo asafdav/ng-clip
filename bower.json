@@ -1,6 +1,6 @@
 {
   "name": "ng-clip",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "main": "dest/ng-clip.min.js",
   "dependencies": {
     "angular": ">=1.0.4",
