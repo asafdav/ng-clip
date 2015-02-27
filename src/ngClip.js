@@ -72,6 +72,7 @@
               if (angular.isDefined(attrs.clipClick)) {
                 scope.$apply(scope.clipClick);
               }
+              element.blur();
             });
 
             scope.$on('$destroy', function() {
