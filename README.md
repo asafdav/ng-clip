@@ -4,12 +4,12 @@ ngClip - Copy to clipboard using AngularJS
 An AngularJS simple directive that uses ZeroClipboard and updates the user's clipboard.
 
 
-## How to get it ? 
+## How to get it ?
 
 #### Manual Download
 Download the from [here](https://github.com/asafdav/ng-clip/releases)
 
-#### Bower 
+#### Bower
 ```
 bower install zeroclipboard ng-clip
 ```
@@ -55,18 +55,22 @@ ng-clip is available at [cdnjs](http://www.cdnjs.com/libraries/ng-clip)
   ```html
   <a href="" clip-click"getHtmlToCopy()" clip-copy-mime-type="text/html">Copy HTML</a>
   ```
-  
+
 7. You can also optionally provide a fallback function that gets called if flash is unavailable:
   ```html
   <a href="" clip-click-fallback="fallback(copy)" clip-copy="getTextToCopy()" clip-click="doSomething()">Copy</a>
   ```
-
   If the fallback function is defined to accept an argument named `copy`, that argument will be populated with the text to copy.
 
+8. set `auto-hide-on-no-flash = true`, it is used to hide button copy when browser flash is none, default `auto-hide-on-no-flash = false`, example:
+
+  ```html
+  <a href="" auto-hide-on-no-flash="true" clip-copy="getTextToCopy()" clip-click="doSomething()">Copy</a>
+  ```
+
 ## Examples
-You can check out this live example here: http://plnkr.co/xwV5Yn 
-see the examples folder for more 
+You can check out this live example here: http://plnkr.co/xwV5Yn
+see the examples folder for more
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/asafdav/ng-clip/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
