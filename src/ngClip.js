@@ -10,7 +10,7 @@
       this.path = '//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.6/ZeroClipboard.swf';
       return {
         setPath: function(newPath) {
-         self.path = newPath;
+          self.path = newPath;
         },
         setConfig: function(config) {
           self.config = config;
@@ -37,12 +37,19 @@
         scope: {
           clipCopy: '&',
           clipClick: '&',
-          clipClickFallback: '&'
+          clipClickFallback: '&',
+          autoHideOnNoFlash: '='
         },
         restrict: 'A',
         link: function (scope, element, attrs) {
-          // Bind a fallback function if flash is unavailable
           if (ZeroClipboard.isFlashUnusable()) {
+            // hide button copy when flash is unavailable
+            if(!!scope.autoHideOnNoFlash) {
+              element.hide();
+              return;
+            }
+
+            // Bind a fallback function if flash is unavailable
             element.bind('click', function($event) {
               // Execute the expression with local variables `$event` and `copy`
               scope.$apply(scope.clipClickFallback({
