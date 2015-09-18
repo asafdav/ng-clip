@@ -53,7 +53,7 @@ ng-clip is available at [cdnjs](http://www.cdnjs.com/libraries/ng-clip)
 
 6. You can optionally specify the MIME type by providing using the `clip-copy-mime-type` attribute:
   ```html
-  <a href="" clip-click"getHtmlToCopy()" clip-copy-mime-type="text/html">Copy HTML</a>
+  <a href="" clip-click="getHtmlToCopy()" clip-copy-mime-type="text/html">Copy HTML</a>
   ```
 
 7. You can also optionally provide a fallback function that gets called if flash is unavailable:
