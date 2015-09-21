@@ -65,7 +65,7 @@
           var client = new ZeroClipboard(element);
           if (attrs.clipCopy === "") {
             scope.clipCopy = function(scope) {
-              return element[0].previousElementSibling.innerText;
+              return element[0].previousElementSibling.innerText || element[0].previousElementSibling.textContent;
             };
           }
           client.on( 'ready', function(readyEvent) {
