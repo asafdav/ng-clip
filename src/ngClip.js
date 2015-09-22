@@ -1,7 +1,17 @@
 /*jslint node: true */
 /*global ZeroClipboard */
 
-(function(window, angular, undefined) {
+(function (root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. register as an anonymous module.
+    define(['exports', 'angular', 'zeroclipboard'], factory);
+  } else if (typeof exports === 'object' && typeof exports.nodeName !== 'string') {
+    // CommonJS
+    factory(exports, require('angular'), require('zeroclipboard'));
+  } else {
+    factory((root.ngClip = {}), root.angular, root.ZeroClipboard);
+  }
+}(this, function(window, angular, ZeroClipboard) {
   'use strict';
 
   angular.module('ngClipboard', []).
@@ -89,4 +99,4 @@
         }
       };
     }]);
-})(window, window.angular);
+}));
