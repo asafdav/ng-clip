@@ -32,7 +32,7 @@
   var myapp = angular.module('myapp', ["ngClipboard"]);
 
   myapp.config(['ngClipProvider', function(ngClipProvider) {
-    ngClipProvider.setPath("../bower_components/zeroclipboard/ZeroClipboard.swf");
+    ngClipProvider.setPath("../bower_components/zeroclipboard/dist/ZeroClipboard.swf");
   }]);
 
   myapp.controller('myctrl', function ($scope) {
