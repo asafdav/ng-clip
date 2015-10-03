@@ -4,7 +4,7 @@
   "main": "src/ngClip.js",
   "dependencies": {
     "angular": ">=1.0.4",
-    "zeroclipboard": "~2.2.0"
+    "clipboard": "~1.4.0"
   },
   "devDependencies": {}
 }
