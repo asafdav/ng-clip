@@ -2,8 +2,8 @@
 <html>
 <head>
   <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-  <script src="../bower_components/angular/angular.min.js"></script>
-  <script src="../bower_components/zeroclipboard/dist/ZeroClipboard.min.js"></script>
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/clipboard/dist/clipboard.js"></script>
   <script src="../src/ngClip.js"></script>
 </head>
 <body>
@@ -48,10 +48,6 @@
 
 <script>
   var myapp = angular.module('myapp', ["ngClipboard"]);
-
-  myapp.config(['ngClipProvider', function(ngClipProvider) {
-    ngClipProvider.setPath("../bower_components/zeroclipboard/dist/ZeroClipboard.swf");
-  }]);
 
   myapp.controller('myctrl', function ($scope) {
     $scope.fallback = function(copy) {
