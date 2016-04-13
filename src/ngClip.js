@@ -7,7 +7,7 @@
   angular.module('ngClipboard', []).
     provider('ngClip', function() {
       var self = this;
-      this.path = '//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.6/ZeroClipboard.swf';
+      this.path = '//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.2.0/ZeroClipboard.swf';
       return {
         setPath: function(newPath) {
           self.path = newPath;
@@ -28,7 +28,7 @@
         swfPath: ngClip.path,
         trustedDomains: ["*"],
         allowScriptAccess: "always",
-        forceHandCursor: true,
+        forceHandCursor: true
       };
       ZeroClipboard.config(angular.extend(config,ngClip.config || {}));
     }]).
