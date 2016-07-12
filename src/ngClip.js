@@ -75,9 +75,13 @@
               clipboard.setData(attrs.clipCopyMimeType || 'text/plain', scope.$eval(scope.clipCopy));
             });
 
-            client.on( 'aftercopy', function(event) {
+            client.on('aftercopy', function($event) {
               if (angular.isDefined(attrs.clipClick)) {
-                scope.$apply(scope.clipClick);
+                scope.$apply(function() {
+                  return scope.clipClick({
+                    $event: $event
+                  });
+                });
               }
               element.blur();
             });
