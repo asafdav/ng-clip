@@ -28,7 +28,7 @@
         swfPath: ngClip.path,
         trustedDomains: ["*"],
         allowScriptAccess: "always",
-        forceHandCursor: true,
+        forceHandCursor: true
       };
       ZeroClipboard.config(angular.extend(config,ngClip.config || {}));
     }]).
